@@ -1,0 +1,134 @@
+/* body {
+    
+    overflow: hidden;
+  }
+  
+  .centerBike {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 26px;
+    margin-left: -12px;
+  }
+  
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+  }
+  
+  #loop {
+    height: 100px;
+    width: 100px;
+    border: #626ED4 solid 4px;
+    border-radius: 200px;
+  }
+  
+  #loop:before {
+    background: linear-gradient(to left, rgba(187, 95, 39, 0) 0%, rgba(98, 100, 212) 30%, rgba(98, 100, 212) 70%, rgba(187, 95, 39, 0) 100%);
+    content: "";
+    display: block;
+    height: 4px;
+    left: -100px;
+    position: relative;
+    top: 100px;
+    width: 300px;
+  }
+  
+  #bike-wrapper {
+    height: 108px;
+    width: 108px;
+    animation: drive 3s linear infinite;
+  }
+  
+  #bike {
+    height: 24px;
+    width: 25px;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133687/motorbike.png");
+  }
+  
+  @keyframes drive {
+    0% {
+      margin-left: -364px;
+      opacity: 0;
+    }
+    33.33% {
+      transform: rotate(0deg);
+      margin-left: -50px;
+      opacity: 1;
+    }
+    66.66% {
+      transform: rotate(-360deg);
+      margin-left: -50px;
+      opacity: 1;
+    }
+    100% {
+      margin-left: 264px;
+      transform: rotate(-360deg);
+      opacity: 0;
+    }
+  } */
+
+
+  /* body {
+    background: #0dc5c1;
+} */
+.loader {
+  overflow: hidden;
+  font-size: 10px;
+  margin: 225px auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  /* background: #f1b25f; */
+  /* background: linear-gradient(to right, rgb(155, 216, 235) 10%, rgba(255, 255, 255, 0) 42%); */
+  background: linear-gradient(to right, #f1b25f 10%, rgba(255, 255, 255, 0) 42%);
+  position: relative;
+  animation: load3 1.4s infinite linear;
+  transform: translateZ(0);
+}
+.loader:before {
+  width: 50%;
+  height: 50%;
+  /* background: rgb(101, 189, 230); */
+  background: #FB991C;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+.loader:after {
+  /* background: #0dc5c1; */
+  background: #594125;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.5;
+}
+@-webkit-keyframes load3 {
+  0% {
+      transform: rotate(0deg);
+ }
+  100% {
+      transform: rotate(360deg);
+ }
+}
+@keyframes load3 {
+  0% {
+      transform: rotate(0deg);
+ }
+  100% {
+      transform: rotate(360deg);
+ }
+}

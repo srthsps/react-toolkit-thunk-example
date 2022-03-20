@@ -1,0 +1,21 @@
+stages:
+  - staging-deploy
+  - lint
+
+staging_deploy:
+  image: geshan/fabric-alpine:latest 
+  stage: staging-deploy
+  script:
+   - fab deploy
+  only:
+   - master
+
+lint:
+  image: node:15
+  stage: lint
+  before_script:
+    - npm install --progress=false --legacy-peer-deps
+  script:
+    - npm run lint
+  when:
+    - manual
